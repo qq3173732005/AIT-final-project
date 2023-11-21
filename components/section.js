@@ -4,7 +4,6 @@ import RemoveBtn from "./removeBtn";
 import MeetingTimeList from "./meetingtimelist";
 import RecitationList from "./recitationlist";
 import AddBtn from "./addBtn";
-import AddRecitation from "./addRecitation";
 
 export default function Section() {
     return (
