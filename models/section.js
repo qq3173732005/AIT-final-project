@@ -10,6 +10,6 @@ const sectionSchema = new Schema(
     }
 );
 
-const Section = mongoose.models.Section || mongoose.model("Section", sectionSchema);
+const SectionModel = mongoose.models.SectionModel || mongoose.model("SectionModel", sectionSchema);
 
-export default Section;
+export default SectionModel;

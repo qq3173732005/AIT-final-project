@@ -10,6 +10,6 @@ const recitationSchema = new Schema(
     }
 );
 
-const Recitation = mongoose.models.Recitation || mongoose.model("Recitation", recitationSchema);
+const RecitationModel = mongoose.models.RecitationModel || mongoose.model("RecitationModel", recitationSchema);
 
-export default Recitation;
+export default RecitationModel;
