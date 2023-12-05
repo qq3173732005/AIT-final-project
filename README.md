@@ -8,17 +8,14 @@ Tool for efficiently visualizing potential course schedules. Select from a list 
 
 The application will store courses, course sections, and recitations.
 
-* Each course can contain multiple sections
-* Each section can contain multiple recitations
+* Multiple sections can refer to one course
+* Multiple recitations can refer to one section
 
 An Example Course:
 
 ```javascript
 {
-  Course Number: "CSCI-UA.0467",
-  Course Name: "Applied Internet Technology",
-  Selected: true,
-  Sections: // an array of sections for this course
+    name: String
 }
 ```
 
@@ -26,10 +23,11 @@ An Example Section:
 
 ```javascript
 {
-  Section Number: 2,
-  Selected: true,
-  Meeting time: // an array of meeting time objects where each meeting time contains a day of the week, a start time, and an end time,
-  Recitations: // an array of recitations for this section
+    course_id: mongoose.Schema.Types.ObjectId,
+    number: String,
+    meetingTimes: [
+        {day: String, startTime: String, endTime: String}
+    ]
 }
 ```
 
@@ -37,9 +35,11 @@ An Example Recitation:
 
 ```javascript
 {
-  Recitation Number: 1,
-  Selected: true,
-  Meeting time: // an array of meeting time objects where each meeting time contains a day of the week, a start time, and an end time,
+    section_id: mongoose.Schema.Types.ObjectId,
+    number: String,
+    meetingTimes: [
+        {day: String, startTime: String, endTime: String}
+    ]
 }
 ```
 
@@ -73,9 +73,6 @@ Scenario: A week of classes is displayed. In a sidebar, the student browses a li
 * (3 points) Configuration management
     * I'm going to use dotenv
 
-
-
-
 11 points total out of 10 required points
 
 
@@ -83,5 +80,5 @@ Scenario: A week of classes is displayed. In a sidebar, the student browses a li
 
 ## Annotations / References Used
 
-* https://www.youtube.com/watch?v=SqcY0GlETPk&list=TLPQMTExMTIwMjOWhqDQ_-Ealw&index=2&ab_channel=ProgrammingwithMosh
+* https://www.youtube.com/watch?v=wNWyMsrpbz0
 
