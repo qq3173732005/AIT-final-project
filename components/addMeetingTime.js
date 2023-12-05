@@ -2,7 +2,7 @@ export default function AddMeetingTime() {
     return (
         <div className="flex flex-row my-1">
             <span>Meeting Day:</span>
-            <select className="mx-1" required>
+            <select className="text-black mx-1" required>
                 <option value="sun">Sun</option>
                 <option value="mon">Mon</option>
                 <option value="tue">Tue</option>
@@ -15,7 +15,7 @@ export default function AddMeetingTime() {
             <input type="time" className="mx-1" required/>
             <span>End Time:</span>
             <input type="time" className="mx-1" required/>
-            <input type="submit" value="Add Time" className="bg-gray text-antiquewhite px-1"/>
+            <input type="submit" value="Add Time" className="bg-black text-antiquewhite px-1"/>
         </div>
     );
 };

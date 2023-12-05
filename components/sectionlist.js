@@ -24,4 +24,4 @@ export async function getServerSideProps(course_id) {
         console.error("Error fetching sections:", error);
         return [];
     }
-}
+};

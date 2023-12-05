@@ -1,7 +1,7 @@
-export default function MeetingTime() {
+export default function MeetingTime({day, startTime, endTime}) {
     return(
         <div>
-            Day StartTime EndTime
+            {day} {startTime}-{endTime}
         </div>
     );
 };

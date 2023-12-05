@@ -25,4 +25,4 @@ export async function getServerSideProps() {
         console.error("Error fetching courses:", error);
         return [];
     }
-}
+};
