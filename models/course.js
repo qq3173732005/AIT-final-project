@@ -1,10 +1,8 @@
 import mongoose, { Schema } from "mongoose";
-import sectionSchema from "./section";
 
 const courseSchema = new Schema(
     {
-        name: String,
-        sections: [sectionSchema]
+        name: String
     }
 );
 

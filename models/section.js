@@ -1,12 +1,12 @@
 import mongoose, { Schema } from "mongoose";
-import meetingTimeSchema from "./meetingTime";
-import recitationSchema from "./recitation";
 
 const sectionSchema = new Schema(
     {
+        course_id: mongoose.Schema.Types.ObjectId,
         number: String,
-        meetingTimes: [meetingTimeSchema],
-        recitations: [recitationSchema]
+        meetingTimes: [
+            {day: String, startTime: String, endTime: String}
+        ]
     }
 );
 
