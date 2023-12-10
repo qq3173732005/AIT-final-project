@@ -6,7 +6,8 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export const revalidate  = 0;
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export async function POST(request) {
     const {name} = await request.json();
