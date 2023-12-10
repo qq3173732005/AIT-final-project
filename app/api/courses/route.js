@@ -5,6 +5,8 @@ import CourseModel from "@/models/course";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
+export const dynamic  = 'force-dynamic';
+
 export async function POST(request) {
     const {name} = await request.json();
     await connectMongoDB();
