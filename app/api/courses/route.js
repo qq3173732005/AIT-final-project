@@ -20,7 +20,6 @@ export async function POST(request) {
 export async function GET() {
     await connectMongoDB();
     const courses = await CourseModel.find();
-    console.log('getting');
     return NextResponse.json({courses}, {status: 200});
 };
 
