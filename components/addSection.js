@@ -6,7 +6,7 @@ export default function AddSection () {
             <span>Section Number: </span>
             <input type="text"/>
             <AddMeetingTime/>
-            <input type="submit" className="bg-black text-antiquewhite px-1"/>
+            <input type="submit" value="Add Section" className="bg-black text-antiquewhite px-1"/>
             <input type="submit" value="Cancel" className="bg-black text-antiquewhite px-1 ml-2"/>
         </form>
     );

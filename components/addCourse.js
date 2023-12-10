@@ -5,7 +5,7 @@ export default function AddCourse() {
             <form className="text-sm font-bold py-1">
                 <span className="text-antiquewhite pl-6 pr-1">Course Name:</span>
                 <input type="text"/>
-                <input type="submit" className="bg-antiquewhite text-black px-1 mx-1"/>
+                <input type="submit" value="Add Course" className="bg-antiquewhite text-black px-1 mx-1"/>
             </form>
         </div>
     );
