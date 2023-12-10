@@ -17,6 +17,8 @@ export default function AddCourse() {
             if(!res.ok) {
                 throw new Error("Failed to create course.");
             }
+            window.location.reload();
+            setName('');
         }
         catch(error) {
             console.log(error);
