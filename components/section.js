@@ -18,7 +18,7 @@ export default async function Section({course_id, number, meetingTimes, _id}) {
     );
 };
 
-export async function getServerSideProps(section_id) {
+async function getServerSideProps(section_id) {
     await connectMongoDB();
     try {
         const recitations = await RecitationModel.find();

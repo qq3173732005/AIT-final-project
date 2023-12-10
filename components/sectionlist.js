@@ -15,7 +15,7 @@ export default async function SectionList({course_id}) {
     );
 };
 
-export async function getServerSideProps(course_id) {
+async function getServerSideProps(course_id) {
     await connectMongoDB();
     try {
         const sections = await SectionModel.find();

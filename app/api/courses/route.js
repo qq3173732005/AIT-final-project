@@ -24,7 +24,7 @@ export async function DELETE(request) {
     await connectMongoDB();
     const sections = await SectionModel.find({course_id: id});
     for(let section of sections) {
-        const recitations = await Recitation.find({section_id: section._id});
+        const recitations = await RecitationModel.find({section_id: section._id});
         for(let recitation of recitations) {
             await RecitationModel.findByIdAndDelete(recitation._id);
         }

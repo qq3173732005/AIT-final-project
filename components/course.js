@@ -12,3 +12,8 @@ export default function Course({name, _id}) {
         </div>
     );
 };
+
+async function getServerSideProps(context) {
+    console.log(context);
+    return 0;
+}

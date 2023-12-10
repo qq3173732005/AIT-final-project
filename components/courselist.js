@@ -16,13 +16,13 @@ export default async function Courselist() {
     );
 };
 
-export async function getServerSideProps() {
+async function getServerSideProps() {
     await connectMongoDB();
     try {
         const courses = await CourseModel.find();
         return courses;
     } catch (error) {
-        console.error("Error fetching courses:", error);
+        console.error("Error finding courses:", error);
         return [];
     }
 };
