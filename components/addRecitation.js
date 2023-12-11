@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import AddMeetingTime from "./addMeetingTime";
 
 export default function AddRecitation({section_id}) {
     const [number, setNumber] = useState('');
@@ -39,7 +38,6 @@ export default function AddRecitation({section_id}) {
                 <input type="submit" value="Add Recitation" className="bg-black text-antiquewhite px-1"/>
                 <input type="submit" value="Cancel" className="bg-black text-antiquewhite px-1 ml-2"/>
             </form>
-            <AddMeetingTime/>
         </div>
     );
 };

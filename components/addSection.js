@@ -39,7 +39,6 @@ export default function AddSection ({course_id}) {
                 <input type="submit" value="Add Section" className="bg-black text-antiquewhite px-1"/>
                 <input type="submit" value="Cancel" className="bg-black text-antiquewhite px-1 ml-2"/>
             </form>
-            <AddMeetingTime/>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 export default function AddMeetingTime() {
     return (
-        <div className="flex flex-row my-1">
+        <div className="text-black text-xs bg-gray w-11/12 py-1 pl-1 flex flex-row my-1">
             <span>Meeting Day:</span>
             <select className="text-black mx-1" required>
                 <option value="sun">Sun</option>

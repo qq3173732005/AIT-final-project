@@ -2,6 +2,7 @@ import connectMongoDB from "@/libs/mongodb";
 import Link from "next/link";
 import ExpandBtn from "./expandbtn";
 import RemoveBtn from "./removeBtn";
+import AddMeetingTime from "./addMeetingTime";
 import MeetingTimeList from "./meetingtimelist";
 import RecitationList from "./recitationlist";
 import AddBtn from "./addBtn";
@@ -12,6 +13,7 @@ export default async function Section({course_id, number, meetingTimes, _id}) {
     return (
         <div className="pl-2">
             <input type="checkbox"/><ExpandBtn/><AddBtn/><Link href={"/editSection"}> <span className="font-bold underline">{number}</span> </Link><RemoveBtn/>
+            <AddMeetingTime/>
             <MeetingTimeList meetingTimes={meetingTimes}/>
             <RecitationList section_id={_id} recitations={recitations}/>
         </div>
